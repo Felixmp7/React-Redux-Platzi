@@ -9,7 +9,7 @@ class Playlist extends Component {
       <div>
         {
           playlist.map( item => {
-            return <Media key={item.id} title={item.title}/>
+            return <Media {...item} key={item.id}/>
           })
         }
       </div>
