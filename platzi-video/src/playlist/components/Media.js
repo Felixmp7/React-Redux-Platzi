@@ -13,9 +13,7 @@ class Media extends Component {
   // }
 
   //Puedo utilizar las arrow functions que heredan el contexto del elemento padre
-  handleClick = evento => {
-    console.log(this.props.title)
-  }
+  handleClick = evento => console.log(this.props.title)
   render(){
     const { author, image, title} = this.props
     //Esto es una forma de utilizar constantes para ahorrar la sintaxis this.props
