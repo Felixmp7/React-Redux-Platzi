@@ -1,6 +1,9 @@
+//Dependencies
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+//Medias
 import './media.css'
-import bitCoin from '../images/covers/bitcoin.jpg'
+
 
 class Media extends Component {
   render(){
@@ -26,6 +29,12 @@ class Media extends Component {
       </div>
     )
   }
+}
+
+Media.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
 }
 
 export default Media;
