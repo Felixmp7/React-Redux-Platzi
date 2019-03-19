@@ -6,11 +6,14 @@ import './media.css'
 
 
 class Media extends Component {
-  constructor(props){
-    super(props)
-    this.handleClick = this.handleClick.bind(this)
-  }
-  handleClick(e){
+  // constructor(props){
+  //   super(props)
+  //   Si no quiero utilizar éste método para cambiar el contexto a cada funcion del DOM
+  // this.handleClick = this.handleClick.bind(this)
+  // }
+
+  //Puedo utilizar las arrow functions que heredan el contexto del elemento padre
+  handleClick = evento => {
     console.log(this.props.title)
   }
   render(){
