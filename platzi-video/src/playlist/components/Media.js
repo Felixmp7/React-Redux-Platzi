@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-class Media extends React.Component {
+class Media extends Component {
   render(){
     return(
       <div>
