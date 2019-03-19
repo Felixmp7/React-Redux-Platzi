@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import bitCoin from '../media/covers/bitcoin.jpg'
 
 class Media extends Component {
   render(){
@@ -14,7 +15,7 @@ class Media extends Component {
       <div style={styles.container}>
         <div>
           <img
-            src=""
+            src={bitCoin}
             alt=""
             width={260}
             height={160}
