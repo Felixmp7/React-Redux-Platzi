@@ -6,14 +6,18 @@ import './media.css'
 
 
 class Media extends Component {
-  // constructor(props){
-  //   super(props)
+  constructor(props){
+    super(props)
+    this.state = {
+      author: props.author
+    }
   //   Si no quiero utilizar éste método para cambiar el contexto a cada funcion del DOM
   // this.handleClick = this.handleClick.bind(this)
   // }
 
   //Puedo utilizar las arrow functions que heredan el contexto del elemento padre
   handleClick = evento => console.log(this.props.title)
+
   render(){
     const { author, image, title} = this.props
     //Esto es una forma de utilizar constantes para ahorrar la sintaxis this.props
@@ -31,7 +35,7 @@ class Media extends Component {
           {/* <h3 className="Media-title">{this.props.title}</h3> */}
           <h3 className="Media-title">{title}</h3>
           {/* <p className="Media-author">{this.props.author}</p> */}
-          <p className="Media-author">{author}</p>
+          <p className="Media-author">{this.state.author}</p>
 
         </div>
       </div>
