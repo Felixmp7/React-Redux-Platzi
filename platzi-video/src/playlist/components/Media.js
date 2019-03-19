@@ -6,8 +6,12 @@ import './media.css'
 
 
 class Media extends Component {
+  constructor(props){
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
   handleClick(e){
-    console.log(e)
+    console.log(this.props.title)
   }
   render(){
     const { author, image, title} = this.props
