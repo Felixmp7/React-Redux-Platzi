@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import bitCoin from '../media/covers/bitcoin.jpg'
+import bitCoin from '../images/covers/bitcoin.jpg'
 
 class Media extends Component {
   render(){
