@@ -2,8 +2,16 @@ import React, { Component } from 'react'
 
 class Media extends Component {
   render(){
+    const styles = {
+      container: {
+        color: '#44546b',
+        cursor: 'pointer',
+        width: 260,
+        border: '1px solid red',
+      }
+    }
     return(
-      <div>
+      <div style={styles.container}>
         <div>
           <img
             src=""
