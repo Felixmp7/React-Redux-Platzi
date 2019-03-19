@@ -6,11 +6,14 @@ import './media.css'
 
 
 class Media extends Component {
+  handleClick(e){
+    console.log(e)
+  }
   render(){
     const { author, image, title} = this.props
     //Esto es una forma de utilizar constantes para ahorrar la sintaxis this.props
     return(
-      <div className="Media">
+      <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img
             className="Media-image"
