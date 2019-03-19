@@ -6,19 +6,18 @@ import './media.css'
 
 
 class Media extends Component {
-  constructor(props){
+  state = {
+    author: 'Felix Pacheco', // ESTA ES LA FORMA CON ECS7
+  }
+  /*constructor(props){
     super(props)
+    ESTA ES LA FORMA DE ECS6 Y ES MAS FASTIDIOSA
     this.state = {
       author: props.author
     }
-  }
-  //   Si no quiero utilizar éste método para cambiar el contexto a cada funcion del DOM
-  // this.handleClick = this.handleClick.bind(this)
-  // }
+  }*/
 
-  //Puedo utilizar las arrow functions que heredan el contexto del elemento padre
   handleClick = evento => {
-    // console.log(this.props.title)
     this.setState({
       author: 'Gabriel Alexander',
     })
