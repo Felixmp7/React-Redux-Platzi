@@ -9,5 +9,6 @@ render(<Media
         title="¿Qué es responsive design?"
         author="Felix Pacheco"
         image="./src/playlist/images/covers/responsive.jpg"
+        type="vidoe afkasdjas"
       />
       , app)
