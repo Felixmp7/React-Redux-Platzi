@@ -1,20 +1,11 @@
 //Dependencies
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 //Medias
 import './media.css'
 
 
-class Media extends Component {
-  // state = {
-  //   author: 'Felix Pacheco',
-  // }
-  // handleClick = evento => {
-  //   this.setState({
-  //     author: 'Gabriel Alexander',
-  //   })
-  // }
-
+class Media extends PureComponent {
   render(){
     return(
       <div className="Media" onClick={this.handleClick}>
@@ -71,7 +62,7 @@ class MiComponente extends Components{
 
 	}
 	shouldComponentUpdate(){
-  	Idea para poner una condición y  si las propiedades que le llegaron anteriormente
+  	Ideal para poner una condición y si las propiedades que le llegaron anteriormente
   	 eran las mismas que tenia, retornar false para evitar re-renderear el componente
 	}
 	componentWillUpdate(){
