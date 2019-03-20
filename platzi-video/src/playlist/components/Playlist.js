@@ -4,10 +4,10 @@ import './playlist.css'
 
 class Playlist extends Component {
   render(){
-    console.log(this.props.data)
+    // console.log(this.props.data)
     const playlist = this.props.data.categories[0].playlist
     return(
-      <div>
+      <div className="Playlist">
         {
           playlist.map( item => {
             return <Media {...item} key={item.id}/>
