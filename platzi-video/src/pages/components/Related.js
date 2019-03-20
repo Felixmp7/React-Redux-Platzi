@@ -1,5 +1,5 @@
 import React from 'react'
-import logoPlatziVideo from '../../logo.png'
+import logoPlatziVideo from '../../images/logo.png'
 
 const Related = props => {
   return(
