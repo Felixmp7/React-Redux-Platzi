@@ -1,11 +1,13 @@
 import React from 'react'
 import Media from './Media'
 import './playlist.css'
+import Play from '../icons/components/Play'
 
 const Playlist = props => {
   const categories = props.data.categories
   return (
         <div className="Playlist">
+          <Play/>
           {
             categories.map( categorie =>{
               return (
