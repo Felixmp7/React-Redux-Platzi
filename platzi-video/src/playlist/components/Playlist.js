@@ -7,7 +7,10 @@ const Playlist = props => {
   const categories = props.data.categories
   return (
         <div className="Playlist">
-          <Play/>
+          <Play
+            color="red"
+            size={50}
+          />
           {
             categories.map( categorie =>{
               return (
