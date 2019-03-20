@@ -11,5 +11,6 @@
 }
 
 .Categorie{
-  margin-bottom: 80px;
+  height: 260px;
+  overflow: auto hidden;
 }

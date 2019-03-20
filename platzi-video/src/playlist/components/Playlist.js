@@ -4,8 +4,6 @@ import './playlist.css'
 
 class Playlist extends Component {
   render(){
-    // console.log(this.props.data)
-    // const playlist = this.props.data.categories[0].playlist
     const categories = this.props.data.categories
     return(
       <div className="Playlist">
