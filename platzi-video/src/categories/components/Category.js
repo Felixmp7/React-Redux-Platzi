@@ -4,11 +4,11 @@ import Playlist from '../../playlist/components/Playlist'
 const Category = props => {
   return(
     <div>
-      {
-        props.playlist.map( item => {
-          return <Playlist {...item}/>
-        })
-      }
+      <p>{props.description}</p>
+      <h2>{props.title}</h2>
+      <Playlist
+        playlist={props.playlist}
+      />
     </div>
   )
 }

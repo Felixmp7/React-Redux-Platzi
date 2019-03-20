@@ -1,42 +1,13 @@
 import React from 'react'
 import Media from './Media'
 import './playlist.css'
-import Play from '../icons/components/Play'
-import Pause from '../icons/components/Pause'
-import FullScreen from '../icons/components/FullScreen'
-import Volume from '../icons/components/Volume'
 
 const Playlist = props => {
-  const categories = props.data.categories
   return (
         <div className="Playlist">
-          <Play
-            color="black"
-            size={50}
-          />
-          <Pause
-            color="black"
-            size={50}
-          />
-          <FullScreen
-            color="black"
-            size={50}
-          />
-          <Volume
-            color="black"
-            size={50}
-          />
           {
-            categories.map( categorie =>{
-              return (
-                <div className="Categorie" key={categorie.id}>
-                  {
-                    categorie.playlist.map( item => {
-                      return <Media {...item} key={item.id}/>
-                    })
-                  }
-                </div>
-              )
+            props.playlist.map( item => {
+              return <Media {...item} key={item.id}/>
             })
           }
         </div>
@@ -68,3 +39,22 @@ export default Playlist;
 // Normalmente tienen estado
 // Llaman acciones
 // Generados por higher order components
+
+/*
+<Play
+  color="black"
+  size={50}
+/>
+<Pause
+  color="black"
+  size={50}
+/>
+<FullScreen
+  color="black"
+  size={50}
+/>
+<Volume
+  color="black"
+  size={50}
+/>
+*/

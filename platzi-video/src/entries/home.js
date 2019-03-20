@@ -1,9 +1,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 import Home from '../pages/containers/home'
-// import data from './src/playlist/api.json'
-// import Playlist from './src/playlist/components/Playlist'
+import data from '../api.json'
 
 const app = document.getElementById('app')
-
-render(<Home/>, app)
+render(<Home data={data}/>, app)
