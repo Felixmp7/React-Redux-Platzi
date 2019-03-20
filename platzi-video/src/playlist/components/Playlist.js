@@ -2,13 +2,28 @@ import React from 'react'
 import Media from './Media'
 import './playlist.css'
 import Play from '../icons/components/Play'
+import Pause from '../icons/components/Pause'
+import FullScreen from '../icons/components/FullScreen'
+import Volume from '../icons/components/Volume'
 
 const Playlist = props => {
   const categories = props.data.categories
   return (
         <div className="Playlist">
           <Play
-            color="red"
+            color="black"
+            size={50}
+          />
+          <Pause
+            color="black"
+            size={50}
+          />
+          <FullScreen
+            color="black"
+            size={50}
+          />
+          <Volume
+            color="black"
             size={50}
           />
           {
