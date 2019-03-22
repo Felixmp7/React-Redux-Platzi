@@ -27,7 +27,7 @@ class Home extends Component {
         <Related/>
         <Categories categories={this.props.data.categories}/>
         {
-          this.state.modalVisible &&
+          !this.state.modalVisible &&
             <ModalContainer>
               <Modal
               handleClick={this.handleCloseModal}
