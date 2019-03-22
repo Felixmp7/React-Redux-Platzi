@@ -9,6 +9,7 @@ const Category = props => {
       <h2>{props.title}</h2>
       <Playlist
         playlist={props.playlist}
+        handleOpenModal={props.handleOpenModal}
       />
     </div>
   )
