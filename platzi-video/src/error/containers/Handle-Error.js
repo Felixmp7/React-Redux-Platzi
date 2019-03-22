@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import RegularError from '../components/RegularError'
 
-class handleError extends Component {
+class HandlError extends Component {
   state = {
     handleError: false,
   }
@@ -17,5 +17,6 @@ class handleError extends Component {
     }
     return this.props.children
   }
+}
 
-export default handleError
+export default HandlError
