@@ -30,7 +30,7 @@ class Home extends Component {
         handleOpenModal={this.handleOpenModal}
         />
         {
-          !this.state.modalVisible &&
+          this.state.modalVisible &&
             <ModalContainer>
               <Modal
               handleClick={this.handleCloseModal}
