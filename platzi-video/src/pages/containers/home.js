@@ -10,7 +10,7 @@ class Home extends Component {
     modalVisible: false,
   }
 
-  handleOpenModal = event => {
+  handleOpenModal = () => {
     this.setState({
       modalVisible: true,
     })
@@ -25,7 +25,10 @@ class Home extends Component {
     return(
       <HomeLayout>
         <Related/>
-        <Categories categories={this.props.data.categories}/>
+        <Categories
+        categories={this.props.data.categories}
+        handleOpenModal={this.handleOpenModal}
+        />
         {
           !this.state.modalVisible &&
             <ModalContainer>
