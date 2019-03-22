@@ -8,6 +8,7 @@ const Modal = props => {
       {
         props.children
       }
+      <button onClick={props.handleClick}>Cerrar</button>
     </div>
   )
 }
