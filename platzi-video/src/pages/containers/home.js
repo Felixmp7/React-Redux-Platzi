@@ -10,7 +10,10 @@ class Home extends Component {
       <HomeLayout>
         <Related/>
         <Categories categories={this.props.data.categories}/>
-        <ModalContainer/>
+        <ModalContainer/> {/*Que hace ModalContainer?
+                              si vamos a Modal.js veremos que el retorna
+                              a sus hijos. Pero en éste momento no tiene hijos
+                              todavia*/}
       </HomeLayout>
     )
   }
