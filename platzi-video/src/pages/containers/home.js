@@ -29,17 +29,17 @@ class Home extends Component {
         <HomeLayout>
         <Related/>
         <Categories
-          categories={this.props.data}
+          categories={this.props.data.categories}
           handleOpenModal={this.handleOpenModal}
         />
         {
           this.state.modalVisible &&
           <ModalContainer>
-          <Modal
-            handleClick={this.handleCloseModal}
-          >
-          <h1>Contenido del Modal</h1>
-          </Modal>
+            <Modal
+              handleClick={this.handleCloseModal}
+            >
+            <h1>Contenido del Modal</h1>
+            </Modal>
           </ModalContainer>
         }
         </HomeLayout>
