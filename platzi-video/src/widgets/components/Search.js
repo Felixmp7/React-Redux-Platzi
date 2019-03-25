@@ -1,8 +1,12 @@
 import React from 'react'
+import './Search.css'
 
 const Search = props => (
-  <form action="">
-    <input type="text"/>
+  <form className="Search">
+    <input
+      type="text"
+      className="Search-input"
+    />
   </form>
 )
 
