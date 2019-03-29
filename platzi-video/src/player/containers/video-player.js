@@ -7,6 +7,8 @@ class VideoPlayerContainer extends Component {
     return(
       <VideoPlayerLayout>
         <Video
+          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          autoplay={true}
         />
       </VideoPlayerLayout>
     )
