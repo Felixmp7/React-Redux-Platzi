@@ -2,6 +2,12 @@ import React, {Component} from 'react'
 import './Video.css'
 
 class Video extends Component {
+  componentWillReceiveProps(nextProps){
+    // console.log(nextProps)
+    this.nextProps.pause !== this.props.pause ?
+
+    :
+  }
   render() {
     return(
       <div className="Video">

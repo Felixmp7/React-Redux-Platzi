@@ -31,6 +31,7 @@ class VideoPlayerContainer extends Component {
           pause={this.state.pause}
         />
         <Video
+          pause={this.state.pause}
           autoPlay={this.props.autoplay}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
         />
