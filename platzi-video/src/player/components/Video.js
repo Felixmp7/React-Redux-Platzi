@@ -6,6 +6,7 @@ class Video extends Component {
     return(
       <div className="Video">
         <video
+          controls
           autoPlay={this.props.autoPlay}
           src={this.props.src}
         />
