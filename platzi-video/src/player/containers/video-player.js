@@ -10,6 +10,7 @@ class VideoPlayerContainer extends Component {
   state = {
     pause: true,
     duration: 0,
+    currentTime: 0,
   }
 
   togglePlay = event => {
@@ -32,7 +33,10 @@ class VideoPlayerContainer extends Component {
   }
 
   handleTimeUpdate = event => {
-    console.log(this.video.currentTime);
+    // console.log(this.video.currentTime)
+    this.setState({
+      currentTime: this.video.currentTime
+    })
   }
   render() {
     return(
@@ -43,6 +47,7 @@ class VideoPlayerContainer extends Component {
         <Controls>
           <Timer
             duration={this.state.duration}
+            currentTime={this.state.currentTime}
           />
           <PlayPause
             handleClick={this.togglePlay}
