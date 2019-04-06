@@ -1,10 +1,14 @@
+//Dependencies
 import React, {Component} from 'react'
+//Components
 import VideoPlayerLayout from '../components/VideoPlayerLayout'
 import Video from '../components/Video'
 import Title from '../components/Title'
 import PlayPause from '../components/Play-Pause.jsx'
 import Timer from '../components/Timer'
 import Controls from '../components/Controls'
+import ProgressBar from '../components/ProgressBar'
+//Functions
 import { formattedTime } from '../../utilities/utilities'
 
 class VideoPlayerContainer extends Component {
@@ -53,6 +57,10 @@ class VideoPlayerContainer extends Component {
           <PlayPause
             handleClick={this.togglePlay}
             pause={this.state.pause}
+          />
+          <ProgressBar
+            duration={this.state.duration}
+            value={this.state.currentTime}
           />
         </Controls>
         <Video
