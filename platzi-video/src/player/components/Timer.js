@@ -10,7 +10,7 @@ const Timer = props => {
   return (
     <div className="Timer">
       <p>
-        <span>{props.currentTime} / {props.duration}</span>
+        <span>{formattedTime(props.currentTime)} / {formattedTime(props.duration)}</span>
       </p>
     </div>
   )
