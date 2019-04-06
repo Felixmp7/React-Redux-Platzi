@@ -4,6 +4,7 @@ import Video from '../components/Video'
 import Title from '../components/Title'
 import PlayPause from '../components/Play-Pause.jsx'
 import Timer from '../components/Timer'
+import Controls from '../components/Controls'
 
 class VideoPlayerContainer extends Component {
   state = {
@@ -35,13 +36,15 @@ class VideoPlayerContainer extends Component {
         <Title
           title="Esto es un video chill"
         />
-        <Timer
-          duration={this.state.duration}
-        />
-        <PlayPause
-          handleClick={this.togglePlay}
-          pause={this.state.pause}
-        />
+        <Controls>
+          <Timer
+            duration={this.state.duration}
+          />
+          <PlayPause
+            handleClick={this.togglePlay}
+            pause={this.state.pause}
+          />
+        </Controls>
         <Video
           handleLoadedMetadata={this.handleLoadedMetadata}
           pause={this.state.pause}
