@@ -16,6 +16,8 @@ class VideoPlayerContainer extends Component {
     pause: true,
     duration: 0,
     currentTime: 0,
+    max: 0,
+    min: 0,
   }
 
   togglePlay = event => {
@@ -33,14 +35,16 @@ class VideoPlayerContainer extends Component {
   handleLoadedMetadata = event => {
     this.video = event.target
     this.setState({
-      duration: formattedTime(this.video.duration)
+      duration: formattedTime(this.video.duration),
+      min: this.video.duration
     })
   }
 
   handleTimeUpdate = event => {
     // console.log(this.video.currentTime)
     this.setState({
-      currentTime: formattedTime(this.video.currentTime)
+      currentTime: formattedTime(this.video.currentTime),
+      max: this.video.currentTime
     })
   }
   render() {
@@ -59,8 +63,8 @@ class VideoPlayerContainer extends Component {
             pause={this.state.pause}
           />
           <ProgressBar
-            duration={this.state.duration}
-            value={this.state.currentTime}
+            duration={this.state.min}
+            value={this.state.max}
           />
         </Controls>
         <Video
