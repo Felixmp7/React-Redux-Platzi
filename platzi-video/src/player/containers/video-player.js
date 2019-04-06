@@ -5,6 +5,7 @@ import Title from '../components/Title'
 import PlayPause from '../components/Play-Pause.jsx'
 import Timer from '../components/Timer'
 import Controls from '../components/Controls'
+import { formattedTime } from '../../utilities/utilities'
 
 class VideoPlayerContainer extends Component {
   state = {
@@ -28,14 +29,14 @@ class VideoPlayerContainer extends Component {
   handleLoadedMetadata = event => {
     this.video = event.target
     this.setState({
-      duration: this.video.duration
+      duration: formattedTime(this.video.duration)
     })
   }
 
   handleTimeUpdate = event => {
     // console.log(this.video.currentTime)
     this.setState({
-      currentTime: this.video.currentTime
+      currentTime: formattedTime(this.video.currentTime)
     })
   }
   render() {
