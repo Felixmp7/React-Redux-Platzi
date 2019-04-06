@@ -47,6 +47,10 @@ class VideoPlayerContainer extends Component {
       max: this.video.currentTime
     })
   }
+
+  handleProgressChange = event =>{
+    this.video.currentTime = event.target.value
+  }
   render() {
     return(
       <VideoPlayerLayout>
@@ -65,6 +69,7 @@ class VideoPlayerContainer extends Component {
           <ProgressBar
             duration={this.state.min}
             value={this.state.max}
+            handleProgressChange={this.handleProgressChange}
           />
         </Controls>
         <Video
