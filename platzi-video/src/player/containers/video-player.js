@@ -43,7 +43,7 @@ class VideoPlayerContainer extends Component {
           pause={this.state.pause}
         />
         <Video
-          onLoadedMetadata={this.handleLoadedMetadata}
+          handleLoadedMetadata={this.handleLoadedMetadata}
           pause={this.state.pause}
           autoPlay={this.props.autoplay}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
