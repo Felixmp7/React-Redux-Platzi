@@ -9,6 +9,7 @@ import Timer from '../components/Timer'
 import Controls from '../components/Controls'
 import ProgressBar from '../components/ProgressBar'
 import Spinner from '../components/Spinner'
+import Volume from '../components/Volume'
 //Functions
 import { formattedTime } from '../../utilities/utilities'
 
@@ -84,6 +85,7 @@ class VideoPlayerContainer extends Component {
             value={this.state.max}
             handleProgressChange={this.handleProgressChange}
           />
+          <Volume/>
         </Controls>
         <Spinner load={this.state.loading}/>
         <Video
