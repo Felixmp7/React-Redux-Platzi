@@ -89,9 +89,24 @@ class VideoPlayerContainer extends Component {
       })
     }
   }
+
+  handleFullClick = event => {
+    if (!document.webkitIsFullSreen) {
+      //Mando el full screen
+    } else {
+      // Salgo del full sreen
+    }
+  }
+
+  setRef = element => {
+    this.player = element
+  }
+
   render() {
     return(
-      <VideoPlayerLayout>
+      <VideoPlayerLayout
+        setRef={this.setRef}
+        >
         <Title
           title="Esto es un video chill"
         />
@@ -114,7 +129,7 @@ class VideoPlayerContainer extends Component {
             handleMute={this.handleMute}
             lastVol={this.state.vol}
           />
-        <FullScreen/>
+        <FullScreen handleFullClick={this.handleFullClick}/>
         </Controls>
         <Spinner load={this.state.loading}/>
         <Video
