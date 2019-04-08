@@ -52,6 +52,13 @@ class VideoPlayerContainer extends Component {
   handleProgressChange = event =>{
     this.video.currentTime = event.target.value
   }
+
+  handleSeeking = event => {
+
+  }
+  handleSeeked = event => {
+
+  }
   render() {
     return(
       <VideoPlayerLayout>
@@ -80,6 +87,8 @@ class VideoPlayerContainer extends Component {
           pause={this.state.pause}
           autoPlay={this.props.autoplay}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          handleSeeking={this.handleSeeking}
+          handleSeeked={this.handleSeeked}
         />
       </VideoPlayerLayout>
     )

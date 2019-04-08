@@ -23,6 +23,8 @@ class Video extends Component {
     const {
       handleLoadedMetadata,
       handleTimeUpdate,
+      handleSeeking,
+      handleSeeked
     } = this.props
     return(
       <div className="Video">
@@ -32,6 +34,8 @@ class Video extends Component {
           src={this.props.src}
           onLoadedMetadata={handleLoadedMetadata}
           onTimeUpdate={handleTimeUpdate}
+          onSeeking={handleSeeking} //Mientras carga
+          onSeeked={handleSeeked} // Cuando ya cargó
         />
       </div>
     )
