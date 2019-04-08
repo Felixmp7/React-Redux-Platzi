@@ -8,6 +8,7 @@ import PlayPause from '../components/Play-Pause.jsx'
 import Timer from '../components/Timer'
 import Controls from '../components/Controls'
 import ProgressBar from '../components/ProgressBar'
+import Spinner from '../components/Spinner'
 //Functions
 import { formattedTime } from '../../utilities/utilities'
 
@@ -72,6 +73,7 @@ class VideoPlayerContainer extends Component {
             handleProgressChange={this.handleProgressChange}
           />
         </Controls>
+        <Spinner/>
         <Video
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}
