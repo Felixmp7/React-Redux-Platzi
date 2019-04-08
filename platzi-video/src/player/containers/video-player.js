@@ -19,6 +19,7 @@ class VideoPlayerContainer extends Component {
     currentTime: 0,
     max: 0,
     min: 0,
+    loading: false,
   }
 
   togglePlay = event => {
@@ -54,10 +55,14 @@ class VideoPlayerContainer extends Component {
   }
 
   handleSeeking = event => {
-
+    this.setState({
+      loading: true
+    })
   }
   handleSeeked = event => {
-
+    this.setState({
+      loading: false
+    })
   }
   render() {
     return(
