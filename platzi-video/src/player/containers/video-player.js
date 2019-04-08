@@ -91,10 +91,12 @@ class VideoPlayerContainer extends Component {
   }
 
   handleFullClick = event => {
-    if (!document.webkitIsFullSreen) {
+    if (!document.webkitIsFullScreen) {
       //Mando el full screen
+      this.player.webkitRequestFullscreen()
     } else {
       // Salgo del full sreen
+      document.webkitExitFullscreen()
     }
   }
 
