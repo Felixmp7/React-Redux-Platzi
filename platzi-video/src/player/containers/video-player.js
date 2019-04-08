@@ -10,6 +10,7 @@ import Controls from '../components/Controls'
 import ProgressBar from '../components/ProgressBar'
 import Spinner from '../components/Spinner'
 import Volume from '../components/Volume'
+import FullScreen from '../components/FullScreen'
 //Functions
 import { formattedTime } from '../../utilities/utilities'
 
@@ -113,6 +114,7 @@ class VideoPlayerContainer extends Component {
             handleMute={this.handleMute}
             lastVol={this.state.vol}
           />
+        <FullScreen/>
         </Controls>
         <Spinner load={this.state.loading}/>
         <Video
