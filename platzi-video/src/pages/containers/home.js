@@ -12,9 +12,10 @@ class Home extends Component {
     modalVisible: false,
   }
 
-  handleOpenModal = () => {
+  handleOpenModal = media => {
     this.setState({
       modalVisible: true,
+      media //media: media => Cualquiera de las 2 formas sirve, cosas de ECS
     })
   }
 
@@ -42,6 +43,8 @@ class Home extends Component {
               <h1>Contenido del Modal</h1>
               <VideoPlayer
                 autoplay
+                src={this.state.media.src}
+                title={this.state.media.title}
               />
             </Modal>
           </ModalContainer>
