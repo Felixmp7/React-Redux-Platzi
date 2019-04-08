@@ -5,10 +5,12 @@ import './Volume.css'
 const Volume = props => {
   return (
     <button className="Volume">
-      <VolumeIcon
-        color="white"
-        size={25}
-      />
+      <div onClick={props.handleMute}>
+        <VolumeIcon
+          color="white"
+          size={25}
+        />
+      </div>
       <div className="Volume-range">
         <input
           type="range"
