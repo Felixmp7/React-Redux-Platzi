@@ -85,12 +85,12 @@ class VideoPlayerContainer extends Component {
             handleProgressChange={this.handleProgressChange}
           />
         </Controls>
-        <Spinner/>
+        <Spinner active={this.state.loading}/>
         <Video
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}
           pause={this.state.pause}
-          autoPlay={this.props.autoplay}
+          autoplay={this.props.autoplay}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}

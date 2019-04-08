@@ -30,7 +30,7 @@ class Video extends Component {
       <div className="Video">
         <video
           ref={this.setRef}
-          autoPlay={this.props.autoPlay}
+          autoPlay={this.props.autoplay}
           src={this.props.src}
           onLoadedMetadata={handleLoadedMetadata}
           onTimeUpdate={handleTimeUpdate}
