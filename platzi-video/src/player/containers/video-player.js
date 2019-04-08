@@ -56,12 +56,12 @@ class VideoPlayerContainer extends Component {
 
   handleSeeking = event => {
     this.setState({
-      loading: true
+      loading: true,
     })
   }
   handleSeeked = event => {
     this.setState({
-      loading: false
+      loading: false,
     })
   }
   render() {
@@ -85,7 +85,7 @@ class VideoPlayerContainer extends Component {
             handleProgressChange={this.handleProgressChange}
           />
         </Controls>
-        <Spinner active={this.state.loading}/>
+        <Spinner load={this.state.loading}/>
         <Video
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}

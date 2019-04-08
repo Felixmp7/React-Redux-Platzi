@@ -2,7 +2,7 @@ import React from 'react'
 import './Spinner.css'
 
 const Spinner = props => {
-  if (!props.loading) return null
+  if (!props.load) return null
   return (
     <div className="Spinner">
       <span>Cargando...</span>
