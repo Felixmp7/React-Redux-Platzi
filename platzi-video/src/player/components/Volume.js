@@ -13,6 +13,7 @@ const Volume = props => {
       </div>
       <div className="Volume-range">
         <input
+          value={props.lastVol}
           type="range"
           min={0}
           max={1}

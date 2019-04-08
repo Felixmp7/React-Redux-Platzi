@@ -111,6 +111,7 @@ class VideoPlayerContainer extends Component {
           <Volume
             handleVolumeChange={this.handleVolumeChange}
             handleMute={this.handleMute}
+            lastVol={this.state.vol}
           />
         </Controls>
         <Spinner load={this.state.loading}/>
