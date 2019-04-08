@@ -110,7 +110,7 @@ class VideoPlayerContainer extends Component {
         setRef={this.setRef}
         >
         <Title
-          title="Esto es un video chill"
+          title={this.props.title}
         />
         <Controls>
           <Timer
@@ -139,7 +139,7 @@ class VideoPlayerContainer extends Component {
           handleTimeUpdate={this.handleTimeUpdate}
           pause={this.state.pause}
           autoplay={this.props.autoplay}
-          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          src={this.props.src}
           handleSeeking={this.handleSeeking}
           handleSeeked={this.handleSeeked}
         />
