@@ -5,6 +5,7 @@
 ## Ciclo de Vida en React
 
   Montaje:
+  
       -Representa el momento donde se inserta el codigo del componente en el DOM.
       
       -Se llaman 3 métodos:
