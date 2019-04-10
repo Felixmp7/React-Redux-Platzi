@@ -3,10 +3,18 @@
 1. Para eliminar divs innecesarios, mejor utilizar <React.Fragment> </React.Fragment>
 
 ## Ciclo de Vida en React
-  1. Montaje:
+  Montaje:
       -Representa el momento donde se inserta el codigo del componente en el DOM
       -Se llaman 3 métodos:
-        1.1 constructor -> Perfecto para inicializar estados
-        1.2 render -> Renderiza el componente
-        1.3 componentDidMount -> Se llama inmediatamente luego del render y hace referencia a cuando
+        * constructor -> Perfecto para inicializar estados
+        * render -> Renderiza el componente
+        * componentDidMount -> Se llama inmediatamente luego del render y hace referencia a cuando
                                  nuestro componente acaba de ser montado.
+  
+  
+  Actualización
+      -Ocurre cuando los props o el estado del componente cambia.
+      -Se llaman 2 métodos:
+        * render -> Re-renderiza el componente si ocurrió algún cambio en su estructura (Esto afecta
+                    a sus hijos tambien)
+        * componentDidUpdate -> Recibe 2 argumentos (props antiguos y estado antiguo)
