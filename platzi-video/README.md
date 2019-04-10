@@ -28,3 +28,9 @@
                     a sus hijos tambien).
                     
         * componentDidUpdate -> Recibe 2 argumentos (props antiguos y estado antiguo).
+        
+   Desmontaje:
+   
+    -Nos da la oportunidad de jacer limpieza de nuestro componente
+    -Se llama un solo método
+      * componentWillUnmount -> Lugar perfecto para limpiar memoria (Timers, intervals)
