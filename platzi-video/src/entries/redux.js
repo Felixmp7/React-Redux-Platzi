@@ -46,7 +46,8 @@ const reducer = function(state,action){
   switch (action.type) {
     case 'ADD_SONG':
       return [...state, action.payload]
-      break;
+    break;
+    
     default: return state
   }
 }
