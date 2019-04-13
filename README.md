@@ -1,6 +1,6 @@
 # React y Redux Platzi
 
-### Rama react
+### Rama master
 
 Rama para Platzi-Video
 
