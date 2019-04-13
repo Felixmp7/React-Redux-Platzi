@@ -34,8 +34,9 @@ const container = document.getElementById('playlist') //Referenciando div del ht
 const playlist = store.getState() // Guardando datos del estore en una constante
 // console.log(store.getState()); // Obteniendo datos del store
 
-playlist.forEach( item => {
-    const template = document.createElement('p')
-    template.textContent = item.title
-    container.appendChild(template)
+playlist.forEach( item => { // Recorriendo el array de objetos
+    const template = document.createElement('p') // Creo un elemento <p> y lo guardo en template
+    template.textContent = item.title // Le añado contenido al tag <p> proporcionado por la data
+                                      // que captura el form = item.title
+    container.appendChild(template) // Le añado a container cada template que creo
 })
