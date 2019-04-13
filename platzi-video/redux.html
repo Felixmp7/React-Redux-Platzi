@@ -4,9 +4,39 @@
     <meta charset="utf-8">
     <title>Redux</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/home.4bdb4f3a1d73d0d8914b.css">
+    <!-- <link rel="stylesheet" href="dist/css/home.4bdb4f3a1d73d0d8914b.css"> -->
+    <style>
+      body {
+        margin: 0;
+        background: lightgray;
+        font-family: Arial;
+        padding-top: 55px;
+      }
+      form {
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        box-sizing: border-box;
+      }
+      p {
+        margin: 10px;
+        background: black;
+        color: white;
+        padding: 5px;
+      }
+    </style>
   </head>
   <body>
+    <form id="form">
+      <input type="text" name="title" placeholder="Nombre de la canción">
+    </form>
     <!-- <div id="home-container"></div> -->
     <!-- <div id="modal-container"></div> -->
   <script src="http://localhost:9000/js/redux.js"></script>
