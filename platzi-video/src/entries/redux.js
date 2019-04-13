@@ -37,4 +37,5 @@ const playlist = store.getState() // Guardando datos del estore en una constante
 playlist.forEach( item => {
     const template = document.createElement('p')
     template.textContent = item.title
+    container.appendChild(template)
 })
