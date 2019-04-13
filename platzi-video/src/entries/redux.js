@@ -13,11 +13,22 @@ function handleSubmit(event) {
 
   store.dispatch({ //Enviando una accion
     type: 'ADD_SONG',
-    payload: {
+    payload: {  // Por convención es bueno mandar el payload como un objeto
       title
     }
   })
 }
+
+/*
+Action = Bloque de información que envía datos a la aplicación.
+
+Datos importantes:
+
+Se envían usando el método dispatch() del store.
+Son la única fuente de información del store.
+Son objetos planos de JavaScript.
+*/
+
 
 const initialState = [
   {
@@ -46,13 +57,3 @@ playlist.forEach( item => { // Recorriendo el array de objetos
                                       // que captura el form = item.title
     container.appendChild(template) // Le añado a container cada template que creo
 })
-
-/*
-Action = Bloque de información que envía datos a la aplicación.
-
-Datos importantes:
-
-Se envían usando el método dispatch() del store.
-Son la única fuente de información del store.
-Son objetos planos de JavaScript.
-*/
