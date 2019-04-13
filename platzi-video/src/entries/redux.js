@@ -6,11 +6,14 @@ form.addEventListener('submit',handleSubmit)
 
 function handleSubmit(event) {
   event.preventDefault()
-
   const data = new FormData(form) // FormData es una clase que podemos utilizar para
                              //  guardar los datos, en éste caso los del formulario
   const title = data.get('title')
   console.log(title)
+
+  store.dispatch({ //Enviando una accion
+    type: 'ADD_SONG',
+  })
 }
 
 const initialState = [
@@ -40,3 +43,13 @@ playlist.forEach( item => { // Recorriendo el array de objetos
                                       // que captura el form = item.title
     container.appendChild(template) // Le añado a container cada template que creo
 })
+
+/*
+Action = Bloque de información que envía datos a la aplicación.
+
+Datos importantes:
+
+Se envían usando el método dispatch() del store.
+Son la única fuente de información del store.
+Son objetos planos de JavaScript.
+*/
