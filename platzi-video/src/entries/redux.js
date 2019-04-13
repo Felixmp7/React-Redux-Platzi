@@ -29,3 +29,5 @@ const store = createStore(
   initialState,   // Estado inicial de nuestra aplicacion,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()  // enhancer,
 )
+
+console.log(store.getState()); // Obteniendo datos del store
