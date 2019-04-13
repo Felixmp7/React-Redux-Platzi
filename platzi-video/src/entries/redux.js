@@ -32,4 +32,9 @@ const store = createStore(
 
 const container = document.getElementById('playlist') //Referenciando div del html
 const playlist = store.getState() // Guardando datos del estore en una constante
-console.log(store.getState()); // Obteniendo datos del store
+// console.log(store.getState()); // Obteniendo datos del store
+
+playlist.forEach( item => {
+    const template = document.createElement('p')
+    template.textContent = item.title
+})
