@@ -13,6 +13,9 @@ function handleSubmit(event) {
 
   store.dispatch({ //Enviando una accion
     type: 'ADD_SONG',
+    payload: {
+      title
+    }
   })
 }
 
