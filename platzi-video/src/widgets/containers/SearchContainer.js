@@ -8,6 +8,13 @@ class SearchContainer extends Component {
   handleSubmit = event => {
     event.preventDefault()
     console.log(this.input.value ,'Submit')
+    // Disparo de la acción
+    dispatch({
+      type: 'SEARCH_VIDEO',
+      payload: {
+        query: this.input.value
+      }
+    })
   }
 
   setInputRef = element => {
