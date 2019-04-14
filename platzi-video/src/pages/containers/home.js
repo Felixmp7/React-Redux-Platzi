@@ -32,7 +32,7 @@ class Home extends Component {
         <HomeLayout>
         <Related/>
         <Categories
-          categories={this.props.data.categories}
+          categories={this.props.categories}
           handleOpenModal={this.handleOpenModal}
         />
         {
@@ -55,5 +55,11 @@ class Home extends Component {
     )
   }
 }
-
-export default Home
+function mapStateToProps(state, props){
+  return {
+    categories: state.data.categories
+    // En ésta función tengo que devolver que datos quiero enviarle
+    // Al componente (home) como nuevas propiedades
+  }
+}
+export default connect(mapStateToProps)(Home)
