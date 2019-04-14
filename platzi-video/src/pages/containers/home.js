@@ -57,7 +57,8 @@ class Home extends Component {
 }
 function mapStateToProps(state, props){
   return {
-    categories: state.data.categories
+    categories: state.data.categories,
+    search: state.search
     // En ésta función tengo que devolver que datos quiero enviarle
     // Al componente (home) como nuevas propiedades
   }
