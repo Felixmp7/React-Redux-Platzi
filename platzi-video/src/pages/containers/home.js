@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import HomeLayout from '../components/home-layout'
 import Categories from '../../categories/components/Categories'
 import Related from '../components/Related'
