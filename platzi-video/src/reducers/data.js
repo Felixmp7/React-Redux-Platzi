@@ -3,11 +3,12 @@ function data(state,action){
     case 'SEARCH_VIDEO': {
       let results = []
       if (action.payload.query) {
-        const list = state.data.categories[2].playlist
-        results = list.filter((item)=>{
-          return item.author.includes(action.payload.query) // Acá estoy comparando
-          // si el author incluye dentro de sus valores lo que viene por payload...
-          // entonces es true y me va a devolver un nuevo arreglo
+        const list = state.data.categories
+        list.map( categoria =>{
+              let tempResults = categoria.playlist.filter(item=>{
+                return item.author.includes(action.payload.query)
+              })
+              results = results.concat(tempResults)
         })
       }
       return {
