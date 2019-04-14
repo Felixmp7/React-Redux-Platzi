@@ -3,13 +3,13 @@ function data(state,action){
     case 'SEARCH_VIDEO': {
       const list = state.data.categories[2].playlist
       const results = list.filter((item)=>{
-        return item.author.include(action.payload.query) // Acá estoy comparando
+        return item.author.includes(action.payload.query) // Acá estoy comparando
         // si el author incluye dentro de sus valores lo que viene por payload...
         // entonces es true y me va a devolver un nuevo arreglo
       })
       return {
         ...state,
-        search: []
+        search: results
       }
     }
     default: return state
