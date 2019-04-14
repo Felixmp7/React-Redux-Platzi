@@ -40,3 +40,5 @@ class SearchContainer extends Component {
 }
 
 export default connect()(SearchContainer)
+
+// connect nos habilita el método dispatch
