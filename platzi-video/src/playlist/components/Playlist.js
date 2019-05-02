@@ -21,22 +21,3 @@ const Playlist = props => {
 }
 
 export default Playlist;
-
-/*
-<Play
-  color="black"
-  size={50}
-/>
-<Pause
-  color="black"
-  size={50}
-/>
-<FullScreen
-  color="black"
-  size={50}
-/>
-<Volume
-  color="black"
-  size={50}
-/>
-*/

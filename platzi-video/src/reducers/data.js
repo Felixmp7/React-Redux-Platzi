@@ -6,7 +6,7 @@ function data(state,action){
         const list = state.data.categories
         list.map( categoria =>{
               let tempResults = categoria.playlist.filter(item=>{
-                return item.author.includes(action.payload.query)
+                return item.author.toLowerCase().includes(action.payload.query.toLowerCase())
               })
               results = results.concat(tempResults)
         })
