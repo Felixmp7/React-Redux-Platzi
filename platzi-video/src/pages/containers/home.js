@@ -63,7 +63,7 @@ function mapStateToProps(state, props){
   return {
     categories, //categories: categories => si se utiliza el mismo nombre de propiedad y valor
                 // puedo ponerlo 1 sola vez
-    search: state.search
+    search: state.data.search
     // En ésta función tengo que devolver que datos quiero enviarle
     // Al componente (home) como nuevas propiedades
   }

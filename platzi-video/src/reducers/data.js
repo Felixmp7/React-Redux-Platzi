@@ -1,10 +1,8 @@
 import schema from '../schemas'
 const initialState = {
-  data: {
-    entities: schema.entities,
-    categories: schema.result.categories,
-    search: [],
-  }
+  entities: schema.entities,
+  categories: schema.result.categories,
+  search: [],
 }
 
 function data(state = initialState,action){
