@@ -7,9 +7,11 @@ const media = new schema.Entity('media',{}, {
   //  la propiedad idAttribute se utiliza por si nuestro key no se llama 'id'
   processStrategy: (value,parent,key) => ({...value, category: parent.id})
 })
-const category = new schema.Entity()
+const category = new schema.Entity('categories', {
+  playlist: new schema.Array(media)
+})
 
-const categories =
+const categories = {categories: new schema.Array(category)}
 
 // const normalizeData = normalize(datos iniciales, datos normalizados)
 const normalizeData = normalize(api,categories)
