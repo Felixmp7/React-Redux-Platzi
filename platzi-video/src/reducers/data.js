@@ -1,4 +1,13 @@
-function data(state,action){
+import data from '../schemas'
+const initialState = {
+  data: {
+    entities: data.entities,
+    categories: data.result.categories,
+    search: [],
+  }
+}
+
+function data(state = initialState,action){
   switch (action.type) {
     case 'SEARCH_VIDEO': {
       let results = []

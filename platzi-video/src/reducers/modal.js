@@ -1,4 +1,9 @@
-function modal(state,action){
+import data from '../schemas'
+const initialState = {
+  visibility: false,
+  mediaID: null,
+}
+function modal(state = initialState,action){
   switch (action.type) {
     case 'OPEN_MODAL':
       return state
