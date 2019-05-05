@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import Home from '../pages/containers/home'
 // import data from '../api.json'
 import data from '../schemas'
-import reducer from '../reducers/data'
+import reducer from '../reducers/index'
 
 console.log(data);
 
