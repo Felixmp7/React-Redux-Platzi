@@ -1,8 +1,8 @@
-import data from '../schemas'
+import schema from '../schemas'
 const initialState = {
   data: {
-    entities: data.entities,
-    categories: data.result.categories,
+    entities: schema.entities,
+    categories: schema.result.categories,
     search: [],
   }
 }
