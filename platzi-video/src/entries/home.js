@@ -11,11 +11,14 @@ console.log(data);
 
 const initialState = {
   data: {
-    // ...data,
     entities: data.entities,
     categories: data.result.categories,
+    search: [],
   },
-  search: []
+  modal: {
+    visibility: false,
+    mediaID: null,
+  }
 }
 const store = createStore(
   reducer,
