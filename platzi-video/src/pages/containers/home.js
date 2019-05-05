@@ -61,7 +61,8 @@ function mapStateToProps(state, props){
     return state.data.entities.categories[categoryID]
   })
   return {
-    categories: categories,
+    categories, //categories: categories => si se utiliza el mismo nombre de propiedad y valor
+                // puedo ponerlo 1 sola vez
     search: state.search
     // En ésta función tengo que devolver que datos quiero enviarle
     // Al componente (home) como nuevas propiedades
