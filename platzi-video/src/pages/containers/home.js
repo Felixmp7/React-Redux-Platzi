@@ -46,7 +46,7 @@ class Home extends Component {
               <h1>Contenido del Modal</h1>
               <VideoPlayer
                 autoplay
-                id={this.props.media.get('mediaID')}
+                id={this.props.modal.get('mediaID')}
                 // src={this.state.media.src}
                 // title={this.state.media.title}
               />
