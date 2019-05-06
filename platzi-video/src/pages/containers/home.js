@@ -10,9 +10,9 @@ import HandlError from '../../error/containers/Handle-Error'
 import VideoPlayer from '../../player/containers/video-player'
 
 class Home extends Component {
-  state = {
-    modalVisible: false,
-  }
+  // state = {
+  //   modalVisible: false,
+  // }
 
   handleOpenModal = media => {
     this.setState({
@@ -38,7 +38,7 @@ class Home extends Component {
           search={this.props.search}
         />
         {
-          this.state.modalVisible &&
+          this.props.modal.get('visibility') &&
           <ModalContainer>
             <Modal
               handleClick={this.handleCloseModal}
@@ -46,8 +46,9 @@ class Home extends Component {
               <h1>Contenido del Modal</h1>
               <VideoPlayer
                 autoplay
-                src={this.state.media.src}
-                title={this.state.media.title}
+                id={this.props.media.get('mediaID')}
+                // src={this.state.media.src}
+                // title={this.state.media.title}
               />
             </Modal>
           </ModalContainer>
@@ -71,7 +72,8 @@ function mapStateToProps(state, props){
   }
   return {
     categories,
-    search: searchResults
+    search: searchResults,
+    modal: state.get('modal')
     // En ésta función tengo que devolver que datos quiero enviarle
     // Al componente (home) como nuevas propiedades
   }
