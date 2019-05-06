@@ -22,8 +22,11 @@ class Home extends Component {
   }
 
   handleCloseModal = event => {
-    this.setState({
-      modalVisible: false,
+    // this.setState({
+    //   modalVisible: false,
+    // })
+    this.props.dispatch({
+      type: 'CLOSE_MODAL',
     })
   }
 

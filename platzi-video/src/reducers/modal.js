@@ -13,7 +13,7 @@ function modal(state = initialState,action){
         mediaID: action.payload.mediaID
       })
     case 'CLOSE_MODAL':
-      return state
+      return state.set('visibility', false)
     default:
       return state
   }
