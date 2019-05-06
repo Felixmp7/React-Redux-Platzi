@@ -1,5 +1,6 @@
 import schema from '../schemas'
 import { fromJS } from 'immutable'
+import { SEARCH_VIDEO } from '../actions/types'
 
 const initialState = fromJS({
   entities: schema.entities,
@@ -9,7 +10,7 @@ const initialState = fromJS({
 
 function data(state = initialState,action){
   switch (action.type) {
-    case 'SEARCH_VIDEO': {
+    case SEARCH_VIDEO: {
       return state.set('search', action.payload.query)
       /*
         Al haber transformado el estado en un mapa, puedo hacer como que seteo el state
