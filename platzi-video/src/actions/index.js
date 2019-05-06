@@ -14,7 +14,7 @@ export function closeModal(){
   }
 }
 
-export function searchVideos(query){
+export function searchVideo(query){
   return {
     type: 'SEARCH_VIDEO',
     payload: {
