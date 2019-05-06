@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { List as list } from 'immutable'
 import HomeLayout from '../components/home-layout'
 import Categories from '../../categories/components/Categories'
 import Related from '../components/Related'
@@ -60,9 +61,17 @@ function mapStateToProps(state, props){
   const categories = state.get('data').get('categories').map( categoryID => {
     return state.get('data').get('entities').get('categories').get(categoryID)
   })
+  let searchResults = list()
+  const search = state.get('data').get('search')
+  if (search) {
+    const mediaList = state.get('data').get('entities').get('media')
+    searchResults = mediaList.filter(item => {
+      item.get('author').toLowerCase().includes(search).toLowerCase()
+    })
+  }
   return {
     categories,
-    search: state.get('data').get('search')
+    search: searchResults
     // En ésta función tengo que devolver que datos quiero enviarle
     // Al componente (home) como nuevas propiedades
   }
