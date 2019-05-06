@@ -1,8 +1,10 @@
 import data from '../schemas'
-const initialState = {
+import { fromJS } from 'immutable'
+
+const initialState = fromJS({
   visibility: false,
   mediaID: null,
-}
+})
 function modal(state = initialState,action){
   switch (action.type) {
     case 'OPEN_MODAL':
