@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import Home from '../pages/containers/home'
 import reducer from '../reducers/index'
 import { Map as map } from 'immutable'
+import logger from 'redux-logger'
 
 // Construccion de un middleware
 // function logger({dispatch,getState}){
@@ -18,13 +19,13 @@ import { Map as map } from 'immutable'
 //   }
 // }
 
-const logger = ({dispatch,getState}) => next => action =>{
-  console.log('Éste es mi viejo estado', getState().toJS());
-  console.log('vamos a enviar ésta acción', action);
-  const value = next(action)
-  console.log('Éste es mi nuevo estado', getState().toJS());
-  return value
-}
+// const logger = ({dispatch,getState}) => next => action =>{
+//   console.log('Éste es mi viejo estado', getState().toJS());
+//   console.log('vamos a enviar ésta acción', action);
+//   const value = next(action)
+//   console.log('Éste es mi nuevo estado', getState().toJS());
+//   return value
+// }
 const store = createStore(
   reducer,
   map(),
