@@ -8,13 +8,10 @@ import ModalContainer from '../../widgets/containers/Modal'
 import Modal from '../../widgets/components/Modal'
 import HandlError from '../../error/containers/Handle-Error'
 import VideoPlayer from '../../player/containers/video-player'
-import { openModal, closeModal} from '../../actions'
+import * as actions from '../../actions'
+import { bindActionCreators } from 'redux'
 
 class Home extends Component {
-  // state = {
-  //   modalVisible: false,
-  // }
-
   handleOpenModal = id => {
     // this.setState({
     //   modalVisible: true,
@@ -28,7 +25,7 @@ class Home extends Component {
     //   }
     // })
 
-    this.props.dispatch(openModal(id))
+    this.props.actions.openModal(id)
   }
 
   handleCloseModal = event => {
@@ -40,7 +37,7 @@ class Home extends Component {
     //   type: 'CLOSE_MODAL',
     // })
 
-    this.props.dispatch(closeModal())
+    this.props.actions.closeModal()
   }
 
   render(){
@@ -94,4 +91,13 @@ function mapStateToProps(state, props){
     // Al componente (home) como nuevas propiedades
   }
 }
-export default connect(mapStateToProps)(Home)
+
+function mapDispatchToProps(dispatch){
+  return {
+    // actions: bindActionCreators(acciones, dispatch)
+    actions: bindActionCreators(actions, dispatch)
+  }
+  //En ésta funcion lo que hago es bindear mis acciones como props para no tener
+  // que utilizar this.props.dispatch() sino manejar las acciones desde las props
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
