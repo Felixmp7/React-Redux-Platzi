@@ -57,13 +57,12 @@ class Home extends Component {
   }
 }
 function mapStateToProps(state, props){
-  const categories = state.data.categories.map( categoryID => {
-    return state.data.entities.categories[categoryID]
+  const categories = state.get('data').get('categories').map( categoryID => {
+    return state.get('data').get('entities').get('categories').get(categoryID)
   })
   return {
-    categories, //categories: categories => si se utiliza el mismo nombre de propiedad y valor
-                // puedo ponerlo 1 sola vez
-    search: state.data.search
+    categories,
+    search: state.get('data').get('search')
     // En ésta función tengo que devolver que datos quiero enviarle
     // Al componente (home) como nuevas propiedades
   }
