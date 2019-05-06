@@ -11,7 +11,7 @@ const Categories = props => {
       {
         props.search.map(item =>{
           // console.log(item);
-          return <Media key={item.get('id')} {...item.toJS()} />
+          return <Media openModal={props.handleOpenModal} key={item.get('id')} {...item.toJS()} />
           //toJS() me transforma el mapa que ahora recibo por immutable en un objeto plano JS
         })
       }

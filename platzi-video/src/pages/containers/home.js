@@ -14,10 +14,16 @@ class Home extends Component {
   //   modalVisible: false,
   // }
 
-  handleOpenModal = media => {
-    this.setState({
-      modalVisible: true,
-      media //media: media => Cualquiera de las 2 formas sirve, cosas de ECS
+  handleOpenModal = id => {
+    // this.setState({
+    //   modalVisible: true,
+    //   media //media: media => Cualquiera de las 2 formas sirve, cosas de ECS
+    // })
+    this.props.dispatch({
+      type: 'OPEN_MODAL',
+      payload: {
+        mediaID: id
+      }
     })
   }
 
