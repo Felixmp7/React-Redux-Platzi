@@ -6,6 +6,8 @@ import Home from '../pages/containers/home'
 import reducer from '../reducers/index'
 import { Map as map } from 'immutable'
 import logger from 'redux-logger'
+import { composeWithDevTools } from 'redux-devtools-extension'
+
 
 // Construccion de un middleware
 // function logger({dispatch,getState}){
@@ -29,8 +31,9 @@ import logger from 'redux-logger'
 const store = createStore(
   reducer,
   map(),
-  applyMiddleware(logger)
-  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(
+    applyMiddleware(logger)
+  )
 )
 
 const homeContainer = document.getElementById('home-container')
