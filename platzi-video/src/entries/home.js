@@ -7,15 +7,23 @@ import reducer from '../reducers/index'
 import { Map as map } from 'immutable'
 
 // Construccion de un middleware
-function logger({dispatch,getState}){
-  return (next) => {
-    return (action) => {
-      console.log('vamos a enviar ésta acción', action);
-      const value = next(action)
-      console.log('Éste es mi nuevo estado', getState().toJS());
-      return value
-    }
-  }
+// function logger({dispatch,getState}){
+//   return (next) => {
+//     return (action) => {
+//       console.log('vamos a enviar ésta acción', action);
+//       const value = next(action)
+//       console.log('Éste es mi nuevo estado', getState().toJS());
+//       return value
+//     }
+//   }
+// }
+
+const logger = ({dispatch,getState}) => next => action =>{
+  console.log('Éste es mi viejo estado', getState().toJS());
+  console.log('vamos a enviar ésta acción', action);
+  const value = next(action)
+  console.log('Éste es mi nuevo estado', getState().toJS());
+  return value
 }
 const store = createStore(
   reducer,
