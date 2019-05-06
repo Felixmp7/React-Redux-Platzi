@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Search from '../components/Search'
-import { searchVideo } from '../../actions'
+import * as actions from '../../actions'
+import { bindActionCreators } from 'redux'
 
 class SearchContainer extends Component {
   state = {
@@ -17,7 +18,7 @@ class SearchContainer extends Component {
     //     query: this.input.value
     //   }
     // })
-    this.props.dispatch(searchVideo(this.input.value))
+    this.props.actions.searchVideo(this.input.value)
   }
 
   setInputRef = element => {
@@ -41,6 +42,12 @@ class SearchContainer extends Component {
   }
 }
 
-export default connect()(SearchContainer)
+function mapDispatchToProps(dispatch){
+  return{
+    actions: bindActionCreators(actions,dispatch)
+  }
+}
+
+export default connect(null,mapDispatchToProps)(SearchContainer)
 
 // connect nos habilita el método dispatch
