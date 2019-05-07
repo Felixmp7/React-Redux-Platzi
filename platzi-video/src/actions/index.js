@@ -32,7 +32,9 @@ export function searchVideo(query){
 
 export function searchAsyncVideo(query){
   return (dispatch) => {
+    dispatch(isLoading(true))
     setTimeout(()=>{
+      dispatch(isLoading(false))
       dispatch(searchVideo(query))
     },5000)
   }
