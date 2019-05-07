@@ -13,30 +13,10 @@ import { bindActionCreators } from 'redux'
 
 class Home extends Component {
   handleOpenModal = id => {
-    // this.setState({
-    //   modalVisible: true,
-    //   media //media: media => Cualquiera de las 2 formas sirve, cosas de ECS
-    // })
-    // _____________________________________________________________________
-    // this.props.dispatch({
-    //   type: 'OPEN_MODAL',
-    //   payload: {
-    //     mediaID: id
-    //   }
-    // })
-
     this.props.actions.openModal(id)
   }
 
   handleCloseModal = event => {
-    // this.setState({
-    //   modalVisible: false,
-    // })
-    //____________________________________________________________________
-    // this.props.dispatch({
-    //   type: 'CLOSE_MODAL',
-    // })
-
     this.props.actions.closeModal()
   }
 
