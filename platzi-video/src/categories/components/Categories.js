@@ -9,6 +9,10 @@ const Categories = props => {
     <div className="Categories">
       <SearchContainer/>
       {
+        props.isLoading &&
+        <p>Buscando tus videos favoritos...</p>
+      }
+      {
         props.search.map(item =>{
           // console.log(item);
           return <Media openModal={props.handleOpenModal} key={item.get('id')} {...item.toJS()} />
