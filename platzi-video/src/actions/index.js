@@ -1,7 +1,8 @@
 import {
   OPEN_MODAL,
   CLOSE_MODAL,
-  SEARCH_VIDEO
+  SEARCH_VIDEO,
+  SEARCH_ASYNC_VIDEO
 } from './types'
 
 export function openModal(mediaID){
@@ -25,5 +26,13 @@ export function searchVideo(query){
     payload: {
       query
     }
+  }
+}
+
+export function searchAsyncVideo(query){
+  return (dispatch) => {
+    setTimeout(()=>{
+      dispatch(searchVideo(query))
+    },5000)
   }
 }

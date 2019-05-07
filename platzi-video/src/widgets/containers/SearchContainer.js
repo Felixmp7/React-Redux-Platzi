@@ -18,7 +18,7 @@ class SearchContainer extends Component {
     //     query: this.input.value
     //   }
     // })
-    this.props.actions.searchVideo(this.input.value)
+    this.props.actions.searchAsyncVideo(this.input.value)
   }
 
   setInputRef = element => {
