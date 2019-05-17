@@ -12,7 +12,3 @@ Rama para bases de Redux con vanilla.js
 
 Rama para Platzi-Video integrada con Redux
 
-### Rama react-router
-
-Rama para Platzi-Video y React-Router
-
